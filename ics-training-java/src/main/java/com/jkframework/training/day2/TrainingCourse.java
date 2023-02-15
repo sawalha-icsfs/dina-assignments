@@ -22,7 +22,7 @@ public class TrainingCourse {
         int maxcount = 0;
         int maxFreqElement1 = 0;
         int maxFreqElement2 = 0;
-
+        int maxFreqElement3 = 0;
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("number of array element in scanner: ");
@@ -43,9 +43,10 @@ public class TrainingCourse {
             avg = (double) sum / n;
             int j = 0;
             int k = 0;
-
+            int m = 0;
             int count = 0;
             int count1 = 0;
+            // int count2 = 0;
 
             for (j = 0; j < n; j++) {
                 if (array[c] == array[j]) {
@@ -58,7 +59,11 @@ public class TrainingCourse {
                     count1++;
                 }
             }
-           
+            // for (m = 0; m < n; m++) {
+            // if (array[k] == array[m]) {
+            // count2++;
+            // }
+            // }
 
             if (count > maxcount) {
                 maxcount = count;
@@ -68,14 +73,20 @@ public class TrainingCourse {
                 maxcount = count1;
                 maxFreqElement2 = array[j];
             }
-           
+            // if (count2 > maxcount) {
+            // maxcount = count2;
+            // maxFreqElement3 = array[m];
+            // }
+
         }
-       
+        // duplicate(array);
+
         System.out.println("Sum is : " + sum);
         System.out.println("Average is : " + avg);
         System.out.println("max Freq Element1 is : " + maxFreqElement1);
         System.out.println("max Freq Element2 is : " + maxFreqElement2);
-        
+        System.out.println("max Freq Element3 is : " + maxFreqElement3);
+
         System.out.println("Array elements are in array.txt file ");
         for (int i = 0; i < n; i++) {
 
