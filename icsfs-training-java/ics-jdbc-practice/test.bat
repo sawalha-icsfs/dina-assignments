@@ -1,0 +1,1 @@
+java -cp target/ics-jdbc-jar-with-dependencies.jar com.jkframework.training.day5.JdbcPractice

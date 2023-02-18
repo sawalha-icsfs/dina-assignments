@@ -7,5 +7,6 @@
 	<modules>
 		<module>ics-game-practice</module>
 		<module>ics-day2-practice</module>
+		<module>ics-jdbc-practice</module>
 	</modules>
 </project>
