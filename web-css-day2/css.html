@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+<title>ClassiAds</title>
+<style>
+
+ul {
+  list-style-type: none;
+  margin: 10;
+  padding: 10;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #6909a0;
+}
+
+.active {
+  background-color: #ffffff;
+}
+
+.img-logo{
+
+width: 100px;  
+height: 100px;
+padding: 5px;
+position: relative;
+}
+
+.image-class {
+  background-image: url('../web-css-day2/resourses/images/website.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+ 
+  
+
+}
+.image-text{
+    color: #6909a0;
+    font-family: 'Courier New';
+    width:auto;
+    text-align: center;
+
+}
+
+.cards-div{
+    padding-top: 5%;
+    width: 900px;
+    padding-left: 25%;
+    padding-bottom: 15%;
+    align-items: center;
+}
+
+.card{
+    width: 150px; 
+    height: 150px; 
+    background-color: rgb(245, 223, 255);
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+
+.img-cards{
+
+width: 70px;  
+height: 70px;
+border-radius: 50%;
+align-items: center;
+margin-left: 23%;
+margin-top: 5%;
+
+}
+h6 , p{
+
+    font-family: 'Courier New';
+    font-size: small;
+    margin-top: 0;
+    text-align: center;
+}
+
+p{
+    color: brown;
+}
+
+</style>
+</head>
+
+
+<body style=" margin: 0; ">
+
+    <div class="top-menu">
+        <div class="right-item">
+            <ul>
+                <li><img src="..\web-css-day2\resourses\images\logo.png" class="img-logo"></li>
+
+                <li style="float:right;"><a class="active" href="#home">REGISTER</a></li>
+                <li style="float:right"><a class="active" href="#home">LOGIN</a></li>
+                <li style="float:right"><a style="background-color: #6909a0;" href="#home">Post Your Ad</a></li>
+                <li style="float:right"><a class="active" href="#home">Contact</a></li>
+                <li style="float:right"><a class="active" href="#home">Blog</a></li>
+                <li style="float:right"><a class="active" href="#home">Categories</a></li>
+                <li style="float:right"><a class="active" href="#home">Listings</a></li>
+                <li style="float:right"><a class="active"  style="color: #6909a0;" href="#home">Home</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="image-class">
+        <div style="padding-top: 140px;">
+            <h1 class="image-text" style="font-size: 50px;">craigslist MarketPlace</h1>
+            <h3 class="image-text" style="font-size: 30px;">You Can Buy, Sell Anything You Can Think Of.</h3>
+            <div id="search-Bar" style="width: 600px; height: 70px; top: 60%; left: 35%; position: relative; border: #6909a0;">
+
+                <input style="height: 40px; width:240px;"
+                type="search"
+                id="searchBar"
+                name="search"
+                placeholder="search craigslist"/>
+                
+                <input style="height: 40px; width:220px;"
+                type="search"
+                id="locationBar"
+                name="location"
+                placeholder="enter location"/>
+
+                <input
+                    style="width: 100px; height: 40px; background-color: #6909a0; color: rgb(241, 241, 241); border-color: rgb(0, 0, 0);"
+                    type="button" value="Search" />
+        </div>
+    </div>
+</div>
+<div style="background-color: rgb(250, 239, 255); width: 100%; margin-top: 0;">
+        <div class="cards-div">
+            <div class="card" >
+                <img src="..\web-css-day2\resourses\images\community.jpg" class="img-cards">
+                <h6>Community</h6>
+                <p>1 Ads +</p>
+            </div>
+            <div class="card" >
+                <img src="..\web-css-day2\resourses\images\services.png" class="img-cards">
+                <h6>Services</h6>
+                <p>4 Ads +</p>
+            </div>
+            <div class="card" >
+                <img src="..\web-css-day2\resourses\images\discussion.png" class="img-cards">
+                <h6>Discussion forums</h6>
+                <p>2 Ads +</p>
+            </div>
+            <div class="card" >
+                <img src="..\web-css-day2\resourses\images\housing.png" class="img-cards">
+                <h6>Housing</h6>
+                <p>0 Ads +</p>
+            </div>
+            <div class="card" >
+                <img src="..\web-css-day2\resourses\images\sale.png" class="img-cards">
+                <h6>For Sale</h6>
+                <p>1 Ads +</p>
+            </div>
+            <div class="card" >
+                <img src="..\web-css-day2\resourses\images\jobs.png" class="img-cards">
+                <h6>Jobs</h6>
+                <p>1 Ads +</p>
+            </div>
+            <div class="card" >
+                <img src="..\web-css-day2\resourses\images\gigs.png" class="img-cards">
+                <h6>gigs</h6>
+                <p>2 Ads +</p>
+            </div>
+            <div class="card" >
+                <img src="..\web-css-day2\resourses\images\resumes.jpg" class="img-cards">
+                <h6>resumes</h6>
+                <p>1 Ads +</p>
+            </div>
+            <div class="card" >
+                <img src="..\web-css-day2\resourses\images\jobs.png" class="img-cards">
+                <h6>Jobs</h6>
+                <p>1 Ads +</p>
+            </div>
+            <div class="card" >
+                <img src="..\web-css-day2\resourses\images\gigs.png" class="img-cards">
+                <h6>gigs</h6>
+                <p>2 Ads +</p>
+            </div>
+        </div>
+</div>
+
+</body>
+
+</html>
