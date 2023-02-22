@@ -2,9 +2,270 @@
 <head>
     <title>Sponsor Registration</title>
     <!--<link rel="stylesheet" type="text/css" href="css/Style.css">-->
-    
-</head>
-<body> 
+   <style>
+    .center {
+	margin: auto;
+	width: 50%;
+	padding: 3px;
+    text-align: center;
+            }
 
+
+    .form-class{
+        font-family: 'Times New Roman';
+        font-size: large;
+
+    }
+
+   td {
+
+        padding: 7px;
+
+    }
+   
+   </style> 
+   <script>
+
+    function allValidations(){
+        
+        if(isURLValid(document.getElementById('companyfacebook').value)){
+        return ;
+        }else{
+        console.log('URL is not valid');
+            return false;
+        
+        }
+        if(validate()){
+            return true;
+        }else{
+            console.log('name is not valid');
+            return false;
+        }
+    }
+   
+    function isURLValid(givenURL) {
+        try {
+            const newUrl = new URL(givenURL);
+            newUrl.protocol === 'https:';
+            newUrl.hostname === 'www.facebook.com';
+
+            var res = string.match(/newUrl.protocol+newUrl.hostname\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+            if (givenURL == res)
+            return true;
+        } catch (err) {
+            console.log("error ", err);
+        return false;
+        }
+    }
+
+    function validate() {
+        var name_first= document.getElementById('name-first').value;
+        var name_last= document.getElementById('name-last').value;
+        var characters= /^[a-zA-Z]*$/;
+
+        /*
+        let x = document.forms["register"]["name_first"].value;
+        let y = document.forms["register"]["name_last"].value;
+        */
+
+
+        let x = document.forms["register"]["name-first"].value;
+        let y = document.forms["register"]["name-last"].value;
+        if (x || y == "") {
+            alert("Name must be filled out");
+            return false;
+        }else{
+            return true;
+        }
+
+        if (isValidChar(name_first) && isValidChar(name_last)) {
+            alert("first name and last name is valid ");
+            return true;
+        }else {
+            alert("one of the names is not valid");
+            return false;
+
+        }
+    }
+
+    function isEmpty(value) {
+        if(value == ""){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    function isValidChar(value) {
+    var characters= /^[a-zA-Z]*$/;
+    if(value.match(characters)){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+   </script>
+</head>
+<body class="center form-class">     
+    <div>
+        <form id="register" method="post" style="border:thin; border-width:1px; border-style:solid; text-align: center;">
+            <table> 
+                <thead>
+                    <h1 style="width: 60%; margin: auto;">Sponsor Registration</h1>
+                    <br/>
+                </thead>
+        
+                <tr>
+                    <td>
+                        <label for="prefix" id="prefix-label" width="10px">Prefix</label>
+                    </td>
+                    <td>
+                        <input type="text" id="prefix" size="20"/>
+                    </td>
+                    <td>
+                        <label for="companyDesc" id="companyDesc-label" width="10px">Company Descrirtion</label>
+                        <br/>
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+
+                        <label for="name" id="name-label" width="10px">Name</label>
+                    </td>
+                    <td>
+                        <input id="name-first"  size="7" placeholder="first name"/>
+                        <input id="name-last"  size="7" placeholder="last name"/>
+                    </td>
+                    <td>
+                        <input type="text" id="companyDesc" size="20" height="20"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="prefpron" id="prefpron-label" width="10px">Preferred Pronouns  </label>
+                    </td>
+                    <td>
+                        <input id="prefpron" size="20"/>
+                    </td>
+
+                    <td>
+                        <label for="companyfacebook" id="companyDesc-label" width="10px">Company FaceBook Page </label>
+                    </td>     
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email" id="email-label" width="10px">Email</label>
+                    </td>
+                    <td>
+                        <input id="email" size="20" placeholder="sample@example.com"/>
+                    </td>
+                    <td>
+                        <input type="text" id="companyfacebook" size="20" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="workphone" id="workphone-label" width="10px">Work Phone</label>
+                    </td>
+                    <td>
+                        <input id="workphone" size="20"/>
+                    </td>
+                    <td>
+                        <label for="companytwitter" id="companyDesc-label" width="10px">Company Twitter Handle </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="cellphone" id="cellphone-label" width="10px">Cell Phone</label>
+                    </td>
+                    <td>
+                        <input id="cellphone" size="20" />
+                    </td>
+                    <td>
+                        <input type="text" id="companytwitter" size="20" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="jobtitle" id="jobtitle-label" width="10px">Job Title</label>
+                    </td>
+                    <td>
+                        <input id="jobtitle" size="20"/>
+                    </td>
+                    <td>
+                        <label for="companylinkedin" id="companylinkedin-label" width="10px">Company LinkedIn Handle </label>
+                    </td>
+                
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="company" id="company-label" width="10px">Company</label>
+                    </td>
+                    <td>
+                        <input id="company" size="20"/>
+                    </td>
+                    <td>
+                        <input type="text" id="companylinkedin" size="20" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="businessAddress" id="businessAddress-label" width="10px">Full Business Address</label>
+                        <br/>
+                        <input id="businessAddress" size="20"/>
+                    </td>
+                    <td></td>
+                    <td>
+                            <label for="sponsorShipLevel" id="sponsorShipLevel-label" width="10px">Sponsorship Level</label>
+                    <br/>
+                            <input type="radio" id="gold" name="sponsorShipLevel-radio" value="Gold">
+                            <label for="gold">Gold</label><br>
+                            <input type="radio" id="diamond" name="sponsorShipLevel-radio" value="Diamond">
+                            <label for="diamond">Diamond</label><br>
+                            <input type="radio" id="platinum" name="sponsorShipLevel-radio" value ="Platinum">
+                            <label for="platinum">Platinum</label>
+                    </td>
+                
+                </tr>
+                <tr>
+                    <td>
+                        <label for="companyWeb" id="companyWeb-label" width="10px">Company Website</label>
+                        <br/>
+                        <input id="companyWeb" size="20"/>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <label for="addGuests" id="addGuests-label" width="10px">Additional Guests(name , email)</label>
+                        <br/>
+                            <input id="addGuests" size="20"/>
+                    </td>
+                    <br/>
+               
+                </tr>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <input type="submit" id="submit"  style="width: 100px; height: 40px; background-color: #000000; color: rgb(241, 241, 241); 
+                                                                 border-color: rgb(0, 0, 0);  float:right;" 
+                        onclick="allValidations()" />
+                    </td>
+                </tr>
+
+                </table>
+          
+
+        </form>
+    </div>
 </body>
 </html>
